@@ -14,7 +14,7 @@ const App = () => {
 
  const initialState = {
    cart : cartItems,
-   total : 0 ,
+   total : 200 ,
    amount : 0
 }
 
