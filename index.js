@@ -5,6 +5,7 @@ import Navbar from './Navbar.js'
 import CartContainer from './cart-container.js'
 import {createStore} from 'redux'
 import './style.css';
+import Reducer from './reducer'
 
 const App = () => {
 
@@ -16,15 +17,9 @@ const App = () => {
    name : ''  
  }
 
- // reducer - arguments state and actions always return new state
-const reducer = (state, actions) => {
-    console.log(state);
-    return {}
-}
-
-
- const store = createStore(reducer , initialState);
-
+const store = createStore(Reducer , initialState);
+store.dispatch({ type: 'INCREASE'})
+console.log(store.getState())
 
  return (
       <main>
