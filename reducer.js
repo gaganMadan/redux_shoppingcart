@@ -1,7 +1,5 @@
 import {DECREASE, INCREASE, REMOVE } from './actions'
 
-
-
 const Reducer = (state, actions) => {
     if(actions.type === DECREASE) {
         
