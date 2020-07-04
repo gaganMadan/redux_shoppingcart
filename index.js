@@ -6,6 +6,7 @@ import CartContainer from './cart-container.js'
 import {createStore} from 'redux'
 import './style.css';
 import Reducer from './reducer'
+import {INCREASE} from './actions'
 
 const App = () => {
 
@@ -18,7 +19,7 @@ const App = () => {
  }
 
 const store = createStore(Reducer , initialState);
-store.dispatch({ type: 'INCREASE'})
+store.dispatch({ type: INCREASE})
 console.log(store.getState())
 
  return (

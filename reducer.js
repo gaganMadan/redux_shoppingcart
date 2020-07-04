@@ -4,13 +4,14 @@ import {RESET} from './actions'
 
 const Reducer = (state, actions) => {
     if(actions.type === DECREASE) {
-        console.log(state);
-        return { count : state.count - 1, name: 'Gagan'}
+        
+        return { ...state, count : state.count - 1}
     }
     if(actions.type === INCREASE) {
-        return { count : state.count + 1, name: 'Dikshan'}
+        
+        return {  ...state, count : state.count + 1}
     }
-    return {state}
+    return {...state}
 }
 
 export default Reducer
