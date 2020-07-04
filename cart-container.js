@@ -1,9 +1,10 @@
 import React from "react";
-import CartItem from "./CartItem";
+import {connect} from  'react-redux'
+import CartItem from './CartItem'
 
 
-const CartContainer = ({ cart = []}) => {
-  if (cart.length === 0) {
+const CartContainer = ({ cartItem = []}) => {
+  if (cartItem.length === 0) {
     return (
       <section className="cart">
         {/* cart header */}
@@ -23,7 +24,7 @@ const CartContainer = ({ cart = []}) => {
       </header>
       {/* cart items */}
       <article>
-        {cart.map(item => {
+        {cartItem.map(item => {
           return <CartItem key={item.id} {...item} />;
         })}
       </article>
@@ -40,5 +41,8 @@ const CartContainer = ({ cart = []}) => {
     </section>
   );
 };
+const mapStateToProps = state => {
+  return {cartItem : state.cart}
+}
 
-export default CartContainer;
+export default connect(mapStateToProps)(CartContainer)
