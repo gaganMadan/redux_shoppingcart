@@ -1,6 +1,6 @@
-import {DECREASE} from './actions'
-import {INCREASE} from './actions'
-import {RESET} from './actions'
+import {DECREASE, INCREASE, REMOVE } from './actions'
+
+
 
 const Reducer = (state, actions) => {
     if(actions.type === DECREASE) {
@@ -11,7 +11,7 @@ const Reducer = (state, actions) => {
         
         return {  ...state, count : state.count + 1}
     }
-    return {...state}
+    return state
 }
 
 export default Reducer

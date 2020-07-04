@@ -14,9 +14,10 @@ const App = () => {
  // creating the store
  // store sccepted three arguments
  const initialState = {
-   count : 4,
-   name : ''  
- }
+   cart : cartItems,
+   total : 0 ,
+   amount : 0
+}
 
 const store = createStore(Reducer , initialState);
 store.dispatch({ type: INCREASE})
