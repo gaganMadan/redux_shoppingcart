@@ -1,14 +1,10 @@
-import {DECREASE, INCREASE, REMOVE } from './actions'
+import {DECREASE, INCREASE, REMOVE, CLEAR_CART } from './actions'
 
 const Reducer = (state, actions) => {
-    if(actions.type === DECREASE) {
-        
-        return { ...state, count : state.count - 1}
+    if(actions.type === CLEAR_CART){
+        return {...state, cart : []}
     }
-    if(actions.type === INCREASE) {
-        
-        return {  ...state, count : state.count + 1}
-    }
+
     return state
 }
 
