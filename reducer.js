@@ -1,6 +1,8 @@
-import {DECREASE, INCREASE, REMOVE, CLEAR_CART } from './actions'
+import {DECREASE, INCREASE, REMOVE, CLEAR_CART, GET_TOTALS } from './actions'
+import React,{useEffect} from 'react';
 
 const Reducer = (state, actions) => {
+   
     if(actions.type === CLEAR_CART){
         return {...state, cart : []}
     }
@@ -27,6 +29,9 @@ const Reducer = (state, actions) => {
           return item;
         })
         return { ...state, cart: tempCard}
+    }
+    if(actions.type === GET_TOTALS){
+      const tempCard = []
     }
 
     return state
