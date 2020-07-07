@@ -49,12 +49,12 @@ const CartItem = ({
 
 const mapDispatchToProps = (dispatch, ownprops) => {
   //console.log(ownprops);
-  const { id, amount } = ownprops;
+  const { id } = ownprops;
   //console.log(id)
   return {
     remove: () => dispatch({ type: REMOVE, payload: { id } }),
-    increase: () => dispatch({ type: INCREASE, payload: { id, amount } }),
-    decrease: () => dispatch({ type: DECREASE, payload: { id, amount} })
+    increase: () => dispatch({ type: INCREASE, payload: { id } }),
+    decrease: () => dispatch({ type: DECREASE, payload: { id } })
   };
 };
 
