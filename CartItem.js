@@ -54,7 +54,7 @@ const mapDispatchToProps = (dispatch, ownprops) => {
   return {
     remove: () => dispatch({ type: REMOVE, payload: { id } }),
     increase: () => dispatch({ type: INCREASE, payload: { id, amount } }),
-    decrease: () => dispatch({ type: DECREASE, payload: { id } })
+    decrease: () => dispatch({ type: DECREASE, payload: { id, amount} })
   };
 };
 
