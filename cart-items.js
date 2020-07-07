@@ -5,7 +5,7 @@ export default [
     price: 599.99,
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1583368215/phone-2_ohtt5s.png",
-    amount: 4
+    amount: 1
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export default [
     price: 499.99,
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1583371867/phone-1_gvesln.png",
-    amount: 7
+    amount: 2
   },
   {
     id: 3,
@@ -21,6 +21,6 @@ export default [
     price: 699.99,
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1583368224/phone-3_h2s6fo.png",
-    amount: 11
+    amount: 1
   }
 ];
