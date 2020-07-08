@@ -3,10 +3,12 @@ import { render } from 'react-dom';
 import cartItems from './cart-items';
 import Navbar from './Navbar.js'
 import CartContainer from './cart-container.js'
-import {createStore} from 'redux'
+import {createStore, applyMiddleware } from 'redux'
 import './style.css';
 import Reducer from './reducer'
 import {Provider} from 'react-redux'
+//import thunk from 'redux-thunk'
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 
 const App = () => {
@@ -18,7 +20,10 @@ const App = () => {
    amount : 0
 }
 
-const store = createStore(Reducer , initialState);
+const middleware = []
+
+const store = createStore(Reducer , initialState, composeWithDevTools(
+  applyMiddleware(...middleware)));
 
 
  return (
